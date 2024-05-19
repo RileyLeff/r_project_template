@@ -1,6 +1,8 @@
 # My Project
 
-Info about my project. 
+Info about my project. Note that you should edit the markdown in this .rmd file, not the .md file.
+
+The .md will be automatically generated from the .rmd when you update the
 
 ## Background
 

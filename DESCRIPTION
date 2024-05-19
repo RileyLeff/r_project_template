@@ -1,0 +1,29 @@
+Title: my_r_project
+Version: 0.1.0
+Date: 2024-02-26
+Authors@R: 
+    c(
+        person(
+            given = "First", 
+            family = "Last", 
+            email = "my_email@institution.edu", 
+            role = c("aut", "cre"),
+            comment = c(ORCID = "0000-0000-0000-0000")
+        ),
+        person(
+            given = "A", 
+            family = "Collaborator", 
+            email = "their_email@institution2.edu", 
+            role = c("aut", "cre")
+            comment = c(ORCID = "0000-0000-0000-0001")
+        )
+    )
+Description: This is my crazy project that goes hard.
+License: file LICENSE
+URL: https://github.com/my_username/my_r_project
+BugReports: https://github.com/my_username/my_r_project
+Depends: R (>= 3.1)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
+Roxygen: list(markdown = TRUE)

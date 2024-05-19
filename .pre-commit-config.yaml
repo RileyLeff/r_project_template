@@ -1,0 +1,37 @@
+repos:
+-   repo: local
+    hooks:
+     -  id: style_dir
+        name: style_dir
+        description: run `style::style_dir(".")`
+        entry: bash .hooks/local/style_dir.sh
+        language: system
+        minimum_pre_commit_version: "2.13.0"
+     -  id: deny_setwd
+        name: deny_setwd
+        description: deny setwd() from being committed into codebase
+        entry: bash .hooks/local/deny_setwd.sh
+        language: system
+        minimum_pre_commit_version: "2.13.0"
+     -  id: generate_readme_from_rmd
+        name: generate_readme_from_rmd
+        description: turn the readme.rmd into a github-flavored readme.md
+        entry: bash .hooks/local/style_dir.sh
+        language: system
+        minimum_pre_commit_version: "2.13.0"
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks: 
+    -   id: check-added-large-files
+        args: ['--maxkb=200']
+    -   id: end-of-file-fixer
+        exclude: '\.Rd'
+-   repo: local
+    hooks:
+    -   id: forbid-to-commit
+        name: Don't commit common R artifacts
+        entry: Cannot commit .Rhistory, .RData, .Rds or .rds.
+        language: fail
+        files: '\.(Rhistory|RData|Rds|rds)$'
+        # `exclude: <regex>` to allow committing specific files
